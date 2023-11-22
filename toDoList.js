@@ -6,22 +6,21 @@ const STATUS = {
 const list = {
 	"create a new practice task": STATUS.IN_PROGRESS,
 	"make a bed": STATUS.DONE, 
-	"write a post": STATUS.DONE,
+	"write a post": STATUS.TODO,
     "practice task": STATUS.TODO,
-    "go home": STATUS.IN_PROGRESS
+    "go home": STATUS.IN_PROGRESS,
 }
 
-
-function changeStatus(name,status){
-    list[name] = status
-}
-function addTask(task,status){
+let changeStatus = (key,status) => list[key] = status
+// function changeStatus(key,status){
+//     list[key] = status
+// }
+let addTask = (task,status) =>{
     list[task] = status;
 }
 
-function deleteTask(name){
-    delete list[name]
-}
+let deleteTask = (name) => delete list[name]
+
 
 function showList(){
     console.log('In progress:');
@@ -45,7 +44,7 @@ function showList(){
     }
 }
 
-changeStatus("write a post", "Done") // меняет статус задачи
-addTask('have a walk'); // добавляет новую задачу
+changeStatus("write a post", STATUS.IN_PROGRESS) // меняет статус задачи
+addTask('have a walk',STATUS.DONE); // добавляет новую задачу
 deleteTask('have a walk'); // удаляет задачу
 showList();

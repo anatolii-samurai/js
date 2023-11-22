@@ -19,7 +19,7 @@ countDown()
 let secondTimer;
 let z = 11;
 function countDownSecond(){
-    z--;
+    z++;
     console.log(`осталось секунд: ${z}`);
      if( z <= 1) {
         clearInterval(secondTimer)
