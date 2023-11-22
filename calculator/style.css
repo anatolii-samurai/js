@@ -1,0 +1,17 @@
+body{
+    margin: 0 auto;
+}
+.main{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+input,select,button{
+    margin-right: 10px;
+}
+input{
+    width: 70px;
+}
